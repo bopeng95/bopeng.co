@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/bopeng95/bopeng.co#readme",
   "dependencies": {
+    "@chakra-ui/icons": "^1.0.3",
     "@chakra-ui/react": "^1.1.2",
+    "@chakra-ui/theme-tools": "^1.0.3",
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
     "framer-motion": "^3.1.4",
