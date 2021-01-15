@@ -1,7 +1,13 @@
-import { Text, VStack } from '@chakra-ui/react';
+import { VStack } from '@chakra-ui/react';
 
-const Sidebar = () => {
-  // const { menu } = props;
+import SideLink from '@/components/SideLink';
+
+const Sidebar = (props) => {
+  const { nav = [] } = props;
+
+  const links = nav.map((item) => {
+    return <SideLink key={`SideLink${item}`} label={item} />;
+  });
 
   return (
     <VStack
@@ -10,14 +16,10 @@ const Sidebar = () => {
       left={0}
       w="50px"
       h="100%"
-      // borderRight="1px solid white"
       justify="center"
       alignItems="center"
     >
-      <Text>o</Text>
-      <Text>o</Text>
-      <Text>o</Text>
-      <Text>o</Text>
+      {links}
     </VStack>
   );
 };

@@ -20,6 +20,7 @@ const Header = (props) => {
   const breakpoint = useBreakpoint();
 
   const smallWindow = breakpoint === 'sm' || breakpoint === 'base';
+  const bigWindow = breakpoint === 'xl';
 
   const navList = nav.map((item) => (
     <Text key={item} mr={5} mb={[5, 5, 0]} cursor="pointer">
@@ -48,11 +49,10 @@ const Header = (props) => {
 
   return (
     <>
-      {!smallWindow ? (
-        <SideMenu />
-      ) : (
+      {smallWindow && (
         <DrawerMenu nav={NavMenu} onClose={onClose} isOpen={isOpen} />
       )}
+      {bigWindow && <SideMenu nav={nav} />}
       <HStack
         justify="space-between"
         w="100%"
