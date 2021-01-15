@@ -7,9 +7,10 @@ const theme = extendTheme({
     global: (props) => ({
       html: {
         boxSizing: 'border-box',
+        scrollBehavior: 'smooth',
       },
       body: {
-        bg: mode('white', 'gray.900')(props),
+        bg: mode('yellow.50', '#282828')(props),
       },
     }),
   },
