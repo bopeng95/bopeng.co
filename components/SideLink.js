@@ -1,17 +1,19 @@
 import { Tooltip, Link, useColorModeValue } from '@chakra-ui/react';
 
 const SideLink = (props) => {
-  const { label, size = '9px' } = props;
+  const { label, size = '9px', active = false } = props;
 
   const color = useColorModeValue('gray.700', 'gray.200');
+  const link = `#${label}`;
 
   return (
     <Tooltip placement="right" label={label}>
       <Link
-        href={`#${label}`}
+        href={link}
         w={size}
         mb={6}
         h={size}
+        bg={active && color}
         border="1px"
         borderColor={color}
         cursor="pointer"

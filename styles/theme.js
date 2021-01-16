@@ -10,7 +10,7 @@ const theme = extendTheme({
         scrollBehavior: 'smooth',
       },
       body: {
-        bg: mode('yellow.50', '#282828')(props),
+        bg: mode('white', '#282828')(props),
       },
     }),
   },

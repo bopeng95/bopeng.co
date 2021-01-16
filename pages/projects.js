@@ -1,13 +1,12 @@
 import { Text } from '@chakra-ui/react';
-
 import Content from '@/components/Content';
 
-const App = () => {
+const Projects = () => {
   return (
-    <Content home>
-      <Text>Home</Text>
+    <Content>
+      <Text>projects</Text>
     </Content>
   );
 };
 
-export default App;
+export default Projects;

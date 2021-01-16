@@ -13,7 +13,8 @@ import { fadeInLeft } from 'react-animations';
 const Drawer = (props) => {
   const { children, onClose, isOpen } = props;
 
-  const bg = useColorModeValue('white', '#303030');
+  // #303030
+  const bg = useColorModeValue('white', '#282828');
   const fadeAnimation = keyframes`${fadeInLeft}`;
 
   return (

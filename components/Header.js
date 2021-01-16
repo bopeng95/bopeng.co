@@ -7,29 +7,46 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon, HamburgerIcon } from '@chakra-ui/icons';
-import { fadeInDown } from 'react-animations';
+import { fadeInDown, fadeInLeft } from 'react-animations';
+import { useRouter } from 'next/router';
 
 import IconButton from '@/components/IconButton';
-import SideMenu from '@/components/SideMenu';
 import DrawerMenu from '@/components/Drawer/DrawerMenu';
+import MenuLink from '@/components/MenuLink';
+
+import { nav } from '@/utils/fixtures';
 
 const Header = (props) => {
-  const { title = 'bo', nav = [] } = props;
+  const { title = 'bo', icon } = props;
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const router = useRouter();
   const breakpoint = useBreakpoint();
 
+  const frontPage = router.pathname === '/';
   const smallWindow = breakpoint === 'sm' || breakpoint === 'base';
-  const bigWindow = breakpoint === 'xl';
+  const active = (name) => router.pathname === name;
 
-  const navList = nav.map((item) => (
-    <Text key={item} mr={5} mb={[5, 5, 0]} cursor="pointer">
-      {item}
-    </Text>
-  ));
+  const goHome = () => {
+    if (router.pathname !== '/') router.push('/');
+  };
+
+  const navList = nav.map((item) => {
+    const link = `/${item}`;
+    const handleClick = () => router.push(link);
+    return (
+      <MenuLink
+        key={`MenuLink${item}`}
+        item={item}
+        active={active(link)}
+        onClick={handleClick}
+      />
+    );
+  });
 
   const Mode = colorMode === 'dark' ? <MoonIcon /> : <SunIcon />;
   const fadeAnimation = keyframes`${fadeInDown}`;
+  const fadeLeft = keyframes`${fadeInLeft}`;
 
   const NavMenu = (
     <>
@@ -52,7 +69,6 @@ const Header = (props) => {
       {smallWindow && (
         <DrawerMenu nav={NavMenu} onClose={onClose} isOpen={isOpen} />
       )}
-      {bigWindow && <SideMenu nav={nav} />}
       <HStack
         justify="space-between"
         w="100%"
@@ -60,9 +76,14 @@ const Header = (props) => {
         position="fixed"
         p={4}
         top={0}
-        animation={`1.2s ${fadeAnimation} ease`}
+        animation={frontPage && `1.2s ${fadeAnimation} ease`}
       >
-        <HStack>
+        <HStack
+          onClick={goHome}
+          cursor="pointer"
+          animation={!frontPage && `1s ${fadeLeft} ease`}
+        >
+          {icon}
           <Text fontWeight="bold">{title}</Text>
         </HStack>
         <HStack>{smallWindow ? HamMenu : NavMenu}</HStack>
