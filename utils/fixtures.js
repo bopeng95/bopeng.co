@@ -1,1 +1,1 @@
-export const nav = ['projects', 'medium'];
+export const nav = ['projects', 'medium', 'resume'];
