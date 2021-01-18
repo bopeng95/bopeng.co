@@ -3,7 +3,7 @@ import { Box, Text, useColorModeValue } from '@chakra-ui/react';
 const MenuLink = (props) => {
   const { item, active = false, onClick } = props;
 
-  const color = useColorModeValue('white, black');
+  const color = useColorModeValue('red.200', 'red.200');
 
   return (
     <Box>

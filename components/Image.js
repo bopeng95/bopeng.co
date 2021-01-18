@@ -1,13 +1,13 @@
-import { Box, Text, Image as ChakraImage } from '@chakra-ui/react';
+import { Box, Tag, Image as ChakraImage } from '@chakra-ui/react';
 
 const Image = (props) => {
   const { description, animation, ...rest } = props;
   return (
     <Box w="100%" h="auto" position="relative" animation={animation}>
       <ChakraImage w={['100%']} {...rest} />
-      <Text position="absolute" bottom={2} left={4}>
+      <Tag position="absolute" bottom={2} left={2} colorScheme="red">
         {description}
-      </Text>
+      </Tag>
     </Box>
   );
 };

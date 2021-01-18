@@ -3,6 +3,9 @@ import { fadeInDown, fadeInRight } from 'react-animations';
 
 import Content from '@/components/Content';
 import Image from '@/components/Image';
+import IconList from '@/components/IconList';
+
+import { icons } from '@/utils/fixtures';
 
 const App = () => {
   const fadeDown = keyframes`${fadeInDown}`;
@@ -36,6 +39,7 @@ const App = () => {
             <Heading mb={5}>hello world</Heading>
             <Text>my name is bo peng</Text>
             <Text>welcome to my website</Text>
+            <IconList icons={icons} size={6} />
           </Box>
         </Flex>
       </Flex>
