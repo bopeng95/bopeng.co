@@ -10,9 +10,9 @@ const Content = (props) => {
   const Icon = !home && <ArrowBackIcon />;
 
   return (
-    <Container maxW="1280px" p={0}>
+    <Container maxW="1280px" p={0} overflowX="hidden">
       <Header title={title} icon={Icon} />
-      <Box p="70px 16px">{children}</Box>
+      <Box p="80px 16px">{children}</Box>
     </Container>
   );
 };
