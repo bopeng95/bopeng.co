@@ -77,6 +77,7 @@ const Header = (props) => {
         p={4}
         top={0}
         animation={frontPage && `1s ${fadeAnimation} ease`}
+        zIndex={1}
       >
         <HStack
           onClick={goHome}

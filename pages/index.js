@@ -1,7 +1,8 @@
-import { Heading, Text, keyframes, Flex, Box, Image } from '@chakra-ui/react';
+import { Heading, Text, keyframes, Flex, Box } from '@chakra-ui/react';
 import { fadeInDown, fadeInRight } from 'react-animations';
 
 import Content from '@/components/Content';
+import Image from '@/components/Image';
 
 const App = () => {
   const fadeDown = keyframes`${fadeInDown}`;
@@ -20,9 +21,8 @@ const App = () => {
           <Image
             src="/me.jpg"
             alt="me"
-            maxw={['auto']}
-            maxh={['auto']}
             animation={imageAnim}
+            description="dia:beacon"
           />
         </Flex>
         <Flex
