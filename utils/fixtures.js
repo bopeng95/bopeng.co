@@ -1,10 +1,10 @@
-import { FaGithub, FaLinkedinIn, FaEnvelope } from 'react-icons/fa';
+import { FaGithubAlt, FaLinkedinIn, FaEnvelope } from 'react-icons/fa';
 
 export const nav = ['projects', 'medium', 'resume'];
 
 export const icons = [
   {
-    Icon: FaGithub,
+    Icon: FaGithubAlt,
     name: 'github',
     link: 'https://github.com/bopeng95',
   },

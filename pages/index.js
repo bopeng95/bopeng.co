@@ -1,6 +1,7 @@
-import { Heading, Text, keyframes, Flex, Box } from '@chakra-ui/react';
+import { Text, keyframes, Flex, Box } from '@chakra-ui/react';
 import { fadeInDown, fadeInRight } from 'react-animations';
 
+import Page from '@/components/Page';
 import Content from '@/components/Content';
 import Image from '@/components/Image';
 import IconList from '@/components/IconList';
@@ -14,36 +15,40 @@ const App = () => {
   const textAnim = `1s ${fadeRight} ease`;
 
   return (
-    <Content home>
-      <Flex
-        justify={['center', 'space-between']}
-        alignItems="center"
-        direction={['column', 'column', 'column', 'row']}
-      >
-        <Flex w={['100%']}>
-          <Image
-            src="/me.jpg"
-            alt="me"
-            animation={imageAnim}
-            description="dia:beacon"
-          />
-        </Flex>
+    <Page>
+      <Content home>
         <Flex
-          w={['100%']}
-          minH="200px"
+          justify={['center', 'space-between']}
           alignItems="center"
-          justify={['', '', '', 'center']}
-          animation={textAnim}
+          direction={['column', 'column', 'column', 'row']}
         >
-          <Box>
-            <Heading mb={5}>hello world</Heading>
-            <Text>my name is bo peng</Text>
-            <Text>welcome to my website</Text>
-            <IconList icons={icons} size={6} />
-          </Box>
+          <Flex w={['100%']}>
+            <Image
+              src="/me.jpg"
+              alt="me"
+              animation={imageAnim}
+              description="dia:beacon"
+            />
+          </Flex>
+          <Flex
+            w={['100%']}
+            minH="200px"
+            alignItems="center"
+            justify={['', '', '', 'center']}
+            animation={textAnim}
+          >
+            <Box>
+              <Text fontSize="5xl" mb={5}>
+                hello world
+              </Text>
+              <Text>my name is bo peng</Text>
+              <Text>welcome to my website</Text>
+              <IconList icons={icons} size={6} />
+            </Box>
+          </Flex>
         </Flex>
-      </Flex>
-    </Content>
+      </Content>
+    </Page>
   );
 };
 

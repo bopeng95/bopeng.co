@@ -13,7 +13,7 @@ const EmptyState = (props) => {
       <Text fontSize={['4xl', '6xl']}>{message}</Text>
       {sub && (
         <Text
-          fontSize={['lg', '2xl']}
+          fontSize={['md', 'lg']}
           onClick={goHome}
           cursor="pointer"
           color="gray.400"

@@ -17,7 +17,7 @@ import MenuLink from '@/components/MenuLink';
 import { nav } from '@/utils/fixtures';
 
 const Header = (props) => {
-  const { title = 'bo', icon } = props;
+  const { title = 'bo', icon, maxW } = props;
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
@@ -72,7 +72,7 @@ const Header = (props) => {
       <HStack
         justify="space-between"
         w="100%"
-        maxW="1280px"
+        maxW={maxW}
         position="fixed"
         p={4}
         top={0}
