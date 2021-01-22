@@ -4,14 +4,14 @@ const IconList = (props) => {
   const { icons = [], size = 5 } = props;
 
   const list = icons.map((item) => {
-    const { Icon, name, link, ...rest } = item;
+    const { Icon, name, link, color = 'red.300', ...rest } = item;
     const key = `iconList${name}`;
     return (
       <Link
         href={link}
         key={key}
         cursor="pointer"
-        _hover={{ color: 'red.200' }}
+        _hover={{ color }}
         transition="color 0.2s"
         mr={4}
         {...rest}

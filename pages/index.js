@@ -1,4 +1,4 @@
-import { Text, keyframes, Flex, Box } from '@chakra-ui/react';
+import { Text, Heading, keyframes, Flex, Box } from '@chakra-ui/react';
 import { fadeInDown, fadeInRight } from 'react-animations';
 
 import Page from '@/components/Page';
@@ -33,16 +33,24 @@ const App = () => {
           <Flex
             w={['100%']}
             minH="200px"
+            py={[10, 10, 10, 0]}
             alignItems="center"
             justify={['', '', '', 'center']}
             animation={textAnim}
           >
-            <Box>
-              <Text fontSize="5xl" mb={5}>
-                hello world
+            <Box px={[5, 5, 5, 20]}>
+              <Heading fontWeight="normal" fontSize={['3xl', '4xl']} mb={5}>
+                hello
+              </Heading>
+              <Text mb={3} fontSize={['sm']}>
+                my name is bo peng and i graduated from new york university with
+                a bachelors in computer science.
               </Text>
-              <Text>my name is bo peng</Text>
-              <Text>welcome to my website</Text>
+              <Text fontSize={['sm']}>
+                currently i am a software engineer focused on building scaled
+                full stack applications using React, Redux, and Node while
+                contributing to open source tools and side projects.
+              </Text>
               <IconList icons={icons} size={6} />
             </Box>
           </Flex>

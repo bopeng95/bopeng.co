@@ -73,8 +73,8 @@ const Header = (props) => {
         justify="space-between"
         w="100%"
         maxW={maxW}
-        position="fixed"
         p={4}
+        position="fixed"
         top={0}
         animation={frontPage && `1s ${fadeAnimation} ease`}
         zIndex={1}
@@ -85,7 +85,9 @@ const Header = (props) => {
           animation={!frontPage && `1s ${fadeLeft} ease`}
         >
           {icon}
-          <Text fontWeight="bold">{title}</Text>
+          <Text fontWeight="bold" fontFamily="Lora">
+            {title}
+          </Text>
         </HStack>
         <HStack>{smallWindow ? HamMenu : NavMenu}</HStack>
       </HStack>

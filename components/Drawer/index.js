@@ -7,8 +7,12 @@ import {
   DrawerHeader,
   DrawerContent,
   DrawerBody,
+  DrawerFooter,
 } from '@chakra-ui/react';
 import { fadeInLeft } from 'react-animations';
+
+import IconList from '@/components/IconList';
+import { icons } from '@/utils/fixtures';
 
 const Drawer = (props) => {
   const { children, onClose, isOpen } = props;
@@ -37,6 +41,9 @@ const Drawer = (props) => {
           <DrawerBody animation={`1s ${fadeAnimation} ease`}>
             {children}
           </DrawerBody>
+          <DrawerFooter>
+            <IconList icons={icons} />
+          </DrawerFooter>
         </DrawerContent>
       </DrawerOverlay>
     </ChakraDrawer>
