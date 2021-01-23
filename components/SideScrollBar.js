@@ -1,13 +1,14 @@
-import { Box, Flex, useColorModeValue } from '@chakra-ui/react';
+import { Box, Flex, useColorModeValue, useTheme } from '@chakra-ui/react';
 
 import useScrollPercentage from '@/hooks/useScrollPercentage';
 
 const SideScrollBar = (props) => {
   const { w = '50px', innerW = '2px' } = props;
   const value = useScrollPercentage();
+  const { scrollBar } = useTheme();
 
   const bg = useColorModeValue('black', 'white');
-  const container = useColorModeValue('#dcdcdc', '#606060');
+  const container = useColorModeValue(scrollBar.light, scrollBar.dark);
 
   return (
     <Flex

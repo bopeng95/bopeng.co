@@ -31,6 +31,10 @@ const theme = extendTheme({
   fontSizes: {
     sm: '0.9rem',
   },
+  scrollBar: {
+    dark: '#606060',
+    light: '#dcdcdc',
+  },
 });
 
 export default theme;
