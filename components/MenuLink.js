@@ -13,6 +13,7 @@ const MenuLink = (props) => {
         borderBottomColor={color}
         display="inline-block"
         mb={[5, 5, 0]}
+        fontFamily="Lora"
         cursor="pointer"
         onClick={onClick}
       >

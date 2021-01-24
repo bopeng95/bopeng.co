@@ -5,10 +5,10 @@ import useScrollPercentage from '@/hooks/useScrollPercentage';
 const SideScrollBar = (props) => {
   const { w = '50px', innerW = '2px' } = props;
   const value = useScrollPercentage();
-  const { scrollBar } = useTheme();
+  const { gray } = useTheme();
 
   const bg = useColorModeValue('black', 'white');
-  const container = useColorModeValue(scrollBar.light, scrollBar.dark);
+  const container = useColorModeValue(gray.light, gray.dark);
 
   return (
     <Flex

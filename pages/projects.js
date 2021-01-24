@@ -2,6 +2,9 @@ import { Container, Heading } from '@chakra-ui/react';
 
 import Page from '@/components/Page';
 import Content from '@/components/Content';
+import ProjectList from '@/components/ProjectList';
+
+import { projects } from '@/utils/fixtures';
 
 const Projects = () => {
   const path = 'projects';
@@ -10,9 +13,10 @@ const Projects = () => {
     <Page name={path} path={`/${path}`}>
       <Content>
         <Container p={0} maxW="960px">
-          <Heading fontWeight="normal" fontSize="3xl">
+          <Heading fontWeight="normal" fontSize={['2xl', '2xl', '3xl']}>
             projects
           </Heading>
+          <ProjectList projects={projects} />
         </Container>
       </Content>
     </Page>

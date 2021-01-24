@@ -10,7 +10,7 @@ const Resume = () => {
     <Page name={path} path={`/${path}`}>
       <Content>
         <Container p={0} maxW="960px">
-          <Heading fontWeight="normal" fontSize="3xl">
+          <Heading fontWeight="normal" fontSize={['2xl', '2xl', '3xl']}>
             resume
           </Heading>
         </Container>

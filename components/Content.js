@@ -5,7 +5,7 @@ import Header from '@/components/Header';
 import SideScrollBar from '@/components/SideScrollBar';
 
 const Content = (props) => {
-  const { home = false, children } = props;
+  const { home = false, scrollBar, children } = props;
   const value = useBreakpoint();
 
   const maxW = '1280px';
@@ -16,7 +16,7 @@ const Content = (props) => {
 
   return (
     <Container maxW={maxW} p={0} overflowX="hidden">
-      {isXL && <SideScrollBar w="6%" />}
+      {isXL && scrollBar && <SideScrollBar w="6%" />}
       <Header title={title} icon={Icon} maxW={maxW} />
       <Box py="80px" px={['16px']}>
         {children}
