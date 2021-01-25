@@ -33,7 +33,7 @@ const theme = extendTheme({
   },
   gray: {
     dark: '#686868',
-    light: '#d0d0d0',
+    light: '#c0c0c0',
   },
 });
 

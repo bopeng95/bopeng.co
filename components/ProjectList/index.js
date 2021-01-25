@@ -4,19 +4,19 @@ import {
   ListItem,
   Box,
   Link,
-  useTheme,
-  useColorModeValue,
+  // useTheme,
+  // useColorModeValue,
 } from '@chakra-ui/react';
 
 import Tags from '@/components/Tags';
 
 const ProjectList = (props) => {
   const { projects = [] } = props;
-  const theme = useTheme();
-  const { gray } = theme;
+  // const theme = useTheme();
+  // const { gray } = theme;
 
-  const color = useColorModeValue('black', 'white');
-  const defaultColor = useColorModeValue(gray.light, gray.dark);
+  // const color = useColorModeValue('black', 'white');
+  // const defaultColor = useColorModeValue(gray.light, gray.dark);
 
   const list = projects.map((item) => {
     const { name, Icon, iconColor, link = '#', tech = [] } = item;
@@ -28,9 +28,9 @@ const ProjectList = (props) => {
           {Icon && <ListIcon as={Icon} color={iconColor} />}
           <Link
             href={link}
-            color={defaultColor}
-            fontSize="xl"
-            _hover={{ color }}
+            // color={color}
+            fontSize={['lg', 'lg', 'xl']}
+            _hover={{ borderBottom: '1px solid' }}
             _focus={{}}
           >
             {name}
