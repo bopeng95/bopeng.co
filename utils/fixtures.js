@@ -49,67 +49,61 @@ export const icons = [
   },
 ];
 
-export const pLegend = [
-  {
-    name: 'done',
+const p = {
+  completed: {
+    status: 'completed',
     Icon: MdCheckCircle,
     iconColor: 'green.400',
   },
-  {
-    name: 'in progress',
+  inProgress: {
+    status: 'in progress',
     Icon: IoEllipsisHorizontalCircleSharp,
     iconColor: 'yellow.400',
   },
-];
+};
 
 export const projects = [
   {
     name: 'dotfiles',
     // link: '',
-    Icon: IoEllipsisHorizontalCircleSharp,
-    iconColor: 'yellow.400',
     tech: [t.bash],
+    ...p.inProgress,
   },
   {
     name: 'valpatches',
     link: 'https://github.com/bopeng95/ValPatches',
-    Icon: IoEllipsisHorizontalCircleSharp,
-    iconColor: 'yellow.400',
     tech: [t.node, t.discord],
+    ...p.inProgress,
   },
   {
     name: 'valorant patch api',
     link: 'https://valapi.vercel.app/patches',
-    Icon: MdCheckCircle,
-    iconColor: 'green.400',
     tech: [t.node, t.cheerio],
+    ...p.completed,
   },
   {
     name: 'novaql - desktop',
     link: 'https://github.com/nova-introspection/novaql',
-    Icon: IoEllipsisHorizontalCircleSharp,
-    iconColor: 'yellow.400',
     tech: [t.react, t.node, t.d3, t.redis, t.electron],
+    ...p.inProgress,
   },
   {
     name: 'novaql - web',
     link: 'https://github.com/nova-introspection/Nova',
-    Icon: MdCheckCircle,
-    iconColor: 'green.400',
     tech: [t.react, t.node, t.d3, t.redis],
+    ...p.completed,
   },
   {
     name: '@bopeng95/wbpk',
-    link: 'https://www.npmjs.com/package/@bopeng95/wbpk',
-    Icon: MdCheckCircle,
-    iconColor: 'green.400',
+    // link: 'https://www.npmjs.com/package/@bopeng95/wbpk',
+    link: 'https://github.com/bopeng95/wbpk',
     tech: [t.js, t.react, t.node, t.npm],
+    ...p.completed,
   },
   {
     name: '@bopeng95/updater',
     link: 'https://github.com/bopeng95/updater',
-    Icon: MdCheckCircle,
-    iconColor: 'green.400',
     tech: [t.js, t.node, t.npm],
+    ...p.completed,
   },
 ];
