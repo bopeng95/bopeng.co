@@ -1,7 +1,7 @@
 import { HStack, Tag } from '@chakra-ui/react';
 
 const Tags = (props) => {
-  const { tags = [] } = props;
+  const { tags = [], ...rest } = props;
 
   const list = tags.map((item, idx) => {
     const { tag, color } = item;
@@ -13,7 +13,11 @@ const Tags = (props) => {
     );
   });
 
-  return <HStack spacing={3}>{list}</HStack>;
+  return (
+    <HStack spacing={3} {...rest}>
+      {list}
+    </HStack>
+  );
 };
 
 export default Tags;

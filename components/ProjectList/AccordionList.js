@@ -1,6 +1,7 @@
 import {
   Box,
   Text,
+  HStack,
   Link,
   ListIcon,
   Accordion,
@@ -15,7 +16,7 @@ const AccordionList = (props) => {
   const { projects = [] } = props;
 
   const list = projects.map((item) => {
-    const { name, Icon, iconColor, link = '#', tech = [], status } = item;
+    const { name, Icon, iconColor, link = '#', tech = [] } = item;
     const key = `ProjectList${name}`;
 
     return (
@@ -27,16 +28,20 @@ const AccordionList = (props) => {
           </Box>
         </AccordionButton>
         <AccordionPanel borderLeft="1px solid">
-          <Text mb={3}>status: {status}</Text>
-          <Link href={link}>link</Link>
-          {tech.length && <Tags tags={tech} />}
+          <HStack mb={0}>
+            <Link href={link} color="blue.400">
+              github
+            </Link>
+          </HStack>
+          <Text>description here</Text>
+          {tech.length && <Tags tags={tech} mt={3} />}
         </AccordionPanel>
       </AccordionItem>
     );
   });
 
   return (
-    <Accordion allowMultiple defaultIndex={[0]} allowToggle my={10}>
+    <Accordion allowMultiple allowToggle my={10}>
       {list}
     </Accordion>
   );
