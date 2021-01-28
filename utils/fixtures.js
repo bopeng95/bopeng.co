@@ -65,44 +65,81 @@ const p = {
 export const projects = [
   {
     name: 'dotfiles',
-    // link: '',
+    links: [],
     tech: [t.bash],
     ...p.inProgress,
   },
   {
     name: 'valpatches',
-    link: 'https://github.com/bopeng95/ValPatches',
+    links: [
+      {
+        title: 'github',
+        href: 'https://github.com/bopeng95/ValPatches',
+      },
+    ],
     tech: [t.node, t.discord],
     ...p.inProgress,
   },
   {
     name: 'valorant patch api',
-    link: 'https://valapi.vercel.app/patches',
+    links: [
+      {
+        title: 'api',
+        href: 'https://valapi.vercel.app/patches',
+      },
+      {
+        title: 'github',
+        href: 'https://github.com/bopeng95/valapi',
+      },
+    ],
     tech: [t.node, t.cheerio],
     ...p.completed,
   },
   {
     name: 'novaql - desktop',
-    link: 'https://github.com/nova-introspection/novaql',
+    links: [
+      {
+        title: 'github',
+        href: 'https://github.com/nova-introspection/novaql',
+      },
+    ],
     tech: [t.react, t.node, t.d3, t.redis, t.electron],
     ...p.inProgress,
   },
   {
     name: 'novaql - web',
-    link: 'https://github.com/nova-introspection/Nova',
+    links: [
+      {
+        title: 'github',
+        href: 'https://github.com/nova-introspection/Nova',
+      },
+    ],
     tech: [t.react, t.node, t.d3, t.redis],
     ...p.completed,
   },
   {
     name: '@bopeng95/wbpk',
-    // link: 'https://www.npmjs.com/package/@bopeng95/wbpk',
-    link: 'https://github.com/bopeng95/wbpk',
+    links: [
+      {
+        title: 'npm',
+        href: 'https://www.npmjs.com/package/@bopeng95/wbpk',
+      },
+      {
+        title: 'github',
+        href: 'https://github.com/bopeng95/wbpk',
+      },
+    ],
     tech: [t.js, t.react, t.node, t.npm],
     ...p.completed,
   },
   {
     name: '@bopeng95/updater',
-    link: 'https://github.com/bopeng95/updater',
+    links: [
+      {
+        title: 'github',
+        href: 'https://github.com/bopeng95/updater',
+      },
+    ],
     tech: [t.js, t.node, t.npm],
     ...p.completed,
   },
