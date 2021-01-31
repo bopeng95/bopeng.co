@@ -17,6 +17,7 @@ const IconList = (props) => {
         {...rest}
         w={size}
         h={size}
+        _focus={{}}
       >
         <Icon size="100%" />
       </Link>

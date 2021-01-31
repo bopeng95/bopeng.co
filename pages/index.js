@@ -1,10 +1,11 @@
-import { Text, Heading, keyframes, Flex, Box } from '@chakra-ui/react';
+import { Text, Heading, keyframes, Flex, Box, HStack } from '@chakra-ui/react';
 import { fadeInDown, fadeInRight } from 'react-animations';
 
 import Page from '@/components/Page';
 import Content from '@/components/Content';
 import Image from '@/components/Image';
 import IconList from '@/components/IconList';
+import Resume from '@/components/Resume';
 
 import { icons } from '@/utils/fixtures';
 
@@ -46,12 +47,15 @@ const App = () => {
                 my name is bo peng and i graduated from new york university with
                 a bachelors in computer science.
               </Text>
-              <Text fontSize={['sm']}>
+              <Text mb={3} fontSize={['sm']}>
                 currently i am a software engineer focused on building scaled
                 full stack applications using React, Redux, and Node while
                 contributing to open source tools and side projects.
               </Text>
-              <IconList icons={icons} size={6} />
+              <HStack spacing={3} mt={10}>
+                <IconList icons={icons} size={6} />
+                <Resume />
+              </HStack>
             </Box>
           </Flex>
         </Flex>

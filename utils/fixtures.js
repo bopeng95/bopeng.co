@@ -21,7 +21,7 @@ const t = {
   npm: { tag: 'npm', color: 'teal' },
 };
 
-export const nav = ['projects', 'resume'];
+export const nav = ['projects'];
 
 export const icons = [
   {

@@ -12,6 +12,8 @@ import {
 import { fadeInLeft } from 'react-animations';
 
 import IconList from '@/components/IconList';
+import Resume from '@/components/Resume';
+
 import { icons } from '@/utils/fixtures';
 
 const Drawer = (props) => {
@@ -43,6 +45,7 @@ const Drawer = (props) => {
           </DrawerBody>
           <DrawerFooter>
             <IconList icons={icons} />
+            <Resume />
           </DrawerFooter>
         </DrawerContent>
       </DrawerOverlay>
