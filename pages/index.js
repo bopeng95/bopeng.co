@@ -44,8 +44,8 @@ const App = () => {
                 hello
               </Heading>
               <Text mb={3} fontSize={['sm']}>
-                my name is bo peng and i graduated from new york university with
-                a bachelors in computer science.
+                f my name is bo peng and i graduated from new york university
+                with a bachelors in computer science.
               </Text>
               <Text mb={3} fontSize={['sm']}>
                 currently i am a software engineer focused on building scaled

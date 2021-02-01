@@ -65,12 +65,14 @@ const p = {
 export const projects = [
   {
     name: 'dotfiles',
+    description: 'personal dotfile configuration for macOS',
     links: [],
     tech: [t.bash],
     ...p.inProgress,
   },
   {
     name: 'valpatches',
+    description: 'discord bot for fetching recent valorant patch notes',
     links: [
       {
         title: 'github',
@@ -82,6 +84,8 @@ export const projects = [
   },
   {
     name: 'valorant patch api',
+    description:
+      'api to get recent valorant patch notes by webscraping with cheerio',
     links: [
       {
         title: 'api',
@@ -97,6 +101,8 @@ export const projects = [
   },
   {
     name: 'novaql - desktop',
+    description:
+      'graphql schema visualizer for the desktop built with electron',
     links: [
       {
         title: 'github',
@@ -108,6 +114,7 @@ export const projects = [
   },
   {
     name: 'novaql - web',
+    description: 'graphql schema visualizer built as a web application',
     links: [
       {
         title: 'github',
@@ -119,6 +126,8 @@ export const projects = [
   },
   {
     name: '@bopeng95/wbpk',
+    description:
+      'npm package that generates a simple react application from scratch',
     links: [
       {
         title: 'npm',
@@ -134,6 +143,8 @@ export const projects = [
   },
   {
     name: '@bopeng95/updater',
+    description:
+      'npm package that updates your package.json dependency versions',
     links: [
       {
         title: 'github',
