@@ -34,14 +34,16 @@ const AccordionList = (props) => {
     return (
       <AccordionItem key={key} border="none">
         <AccordionButton _focus={{}}>
-          <Box minH="31px" fontSize={['lg', 'lg', 'xl']} _focus={{}}>
+          <Box minH="31px" fontFamily="Roboto Mono" _focus={{}}>
             {Icon && <ListIcon as={Icon} color={iconColor} mr={3} />}
             {name}
           </Box>
         </AccordionButton>
         <AccordionPanel borderLeft="1px solid">
           {LinkComponent}
-          <Text my={3}>{description}</Text>
+          <Text mb={5} mt={3}>
+            {description}
+          </Text>
           {tech.length && <Tags tags={tech} mt={3} />}
         </AccordionPanel>
       </AccordionItem>

@@ -21,7 +21,12 @@ const App = () => {
         <Flex
           justify={['center', 'space-between']}
           alignItems="center"
-          direction={['column', 'column', 'column', 'row']}
+          direction={[
+            'column-reverse',
+            'column-reverse',
+            'column-reverse',
+            'row',
+          ]}
         >
           <Flex w={['100%']}>
             <Image

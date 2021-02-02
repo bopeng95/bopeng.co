@@ -1,4 +1,3 @@
-// import { theme as chakraTheme } from '@chakra-ui/react';
 import { extendTheme } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
 
@@ -25,8 +24,9 @@ const theme = extendTheme({
   },
   fonts: {
     heading: 'Lora',
-    // body: 'Merriweather Sans',
+    // body: 'Karla',
     body: 'Karla',
+    span: 'Roboto Mono',
   },
   fontSizes: {
     sm: '0.9rem',
