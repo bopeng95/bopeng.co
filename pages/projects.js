@@ -12,7 +12,7 @@ const Projects = () => {
 
   return (
     <Page name={path} path={`/${path}`}>
-      <Content scrollBar>
+      <Content>
         <Container p={0} maxW="960px">
           <Heading fontWeight="normal" fontSize={['2xl', '2xl', '3xl']}>
             projects

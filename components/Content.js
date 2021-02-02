@@ -3,6 +3,7 @@ import { ArrowBackIcon } from '@chakra-ui/icons';
 
 import Header from '@/components/Header';
 import SideScrollBar from '@/components/SideScrollBar';
+import Copyright from '@/components/Copyright';
 
 const Content = (props) => {
   const { home = false, scrollBar, children } = props;
@@ -21,6 +22,7 @@ const Content = (props) => {
       <Box py="80px" px={['16px']}>
         {children}
       </Box>
+      <Copyright />
     </Container>
   );
 };

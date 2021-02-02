@@ -1,5 +1,5 @@
 import { Text, Heading, keyframes, Flex, Box, HStack } from '@chakra-ui/react';
-import { fadeInDown, fadeInRight } from 'react-animations';
+import { fadeInLeft, fadeInRight } from 'react-animations';
 
 import Page from '@/components/Page';
 import Content from '@/components/Content';
@@ -10,9 +10,9 @@ import Resume from '@/components/Resume';
 import { icons } from '@/utils/fixtures';
 
 const App = () => {
-  const fadeDown = keyframes`${fadeInDown}`;
+  const fadeLeft = keyframes`${fadeInLeft}`;
   const fadeRight = keyframes`${fadeInRight}`;
-  const imageAnim = `1s ${fadeDown} ease`;
+  const imageAnim = `1s ${fadeLeft} ease`;
   const textAnim = `1s ${fadeRight} ease`;
 
   return (

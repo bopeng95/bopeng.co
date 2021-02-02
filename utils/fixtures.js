@@ -44,7 +44,7 @@ export const icons = [
   {
     Icon: FaAt,
     name: 'envelope',
-    color: 'orange.400',
+    color: 'yellow.400',
     link: 'mailto:bopeng95@gmail.com',
   },
 ];
