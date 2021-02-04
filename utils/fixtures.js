@@ -2,7 +2,6 @@ import {
   FaAt,
   FaGithubAlt,
   FaLinkedinIn,
-  // FaEnvelope,
   // FaMediumM,
 } from 'react-icons/fa';
 import { MdCheckCircle } from 'react-icons/md';
@@ -43,7 +42,7 @@ export const icons = [
   // },
   {
     Icon: FaAt,
-    name: 'envelope',
+    name: 'email',
     color: 'yellow.400',
     link: 'mailto:bopeng95@gmail.com',
   },
@@ -65,7 +64,7 @@ const p = {
 export const projects = [
   {
     name: 'dotfiles',
-    description: 'personal dotfile configuration for macOS',
+    description: 'personal dotfile configuration for macOS (soon)',
     links: [],
     tech: [t.bash],
     ...p.inProgress,

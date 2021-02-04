@@ -24,9 +24,8 @@ const theme = extendTheme({
   },
   fonts: {
     heading: 'Lora',
-    // body: 'Karla',
     body: 'Karla',
-    span: 'Roboto Mono',
+    // span: 'Roboto Mono',
   },
   fontSizes: {
     sm: '0.9rem',
